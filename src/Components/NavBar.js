@@ -1,30 +1,47 @@
 import React from "react"
 import logo from "../Assets/Cojon.png"
 import {Col, Divider, Row} from "antd"
-export default function Header(props){
+import { Outlet, Link } from "react-router-dom";
+export default function Header({silly}){
     return(
-        <>
-            <Row className="nav-bar">
-                <Col flex={1}>
-                    <div className="navbar--div-left">
-                        <h3>About</h3>
-                        <h3>Interactive Experiences</h3> 
-                    </div>
-                </Col>
-                <Col flex={1}>
-                    
-                    <img src={logo} alt="cojon" className="nav-bar--logo"/>
-                    
-                </Col>
-                <Col flex={1}> 
-                        <div className="navbar--div-right">      
-                            <h3>Algorithms</h3>
-                            <h3>Equations</h3> 
-                        </div>
-         
-                </Col>
+    <>  
+        
 
-            </Row>
-        </>
+            <div className="nav-bar">
+
+                <Row >
+
+                    <Col span={11}>
+                        <div className="navbar--div">
+                            <Link to={"/"} className="navbar--links">Home</Link>
+                            <Link to={"/about"} className="navbar--links">About</Link>
+                            <Link to={"/interactive_experiences"} className="navbar--links">Interactive Experiences</Link>
+                        </div>
+                    </Col>
+
+                    <Col span={2}>
+                        <div className="nav-bar--logo-div">
+                            <img src={logo} alt="cojon" className="nav-bar--logo"/>
+                        </div>
+                    </Col>
+
+                    <Col span={11}>
+                        <div className="navbar--div">      
+                            <Link to={"/algorithms"} className="navbar--links">Algorithms</Link>
+                            <Link to={"/equations"} className="navbar--links">Equations</Link>
+                            <Link to={"/data"} className="navbar--links">Data</Link>
+                        </div>
+                    </Col>
+
+                </Row>
+                
+            </div>
+
+      
+
+        <div className='buffer'></div>
+    
+        <Outlet />
+    </>
     )
 }

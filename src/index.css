@@ -11,45 +11,72 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.maingrid{
+  text-align: center;
+}
 .nav-bar{
   background-color: white;
-  box-shadow: 10px 10px 5px whitesmoke;
+  box-shadow: 10px 10px 5px rgb(173, 171, 171);
 
-  display: flex;
+  position: fixed;
+  height: 100px; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  z-index: 2;
+}
 
-  padding-left: 30px;
-  padding-right: 30px;
-  height: 100px;
-}
-.navbar--div-left{
+.navbar--div{
   display: flex;
+  justify-content: space-evenly;
+  width:auto;
   height: 100px;
-  margin-right: auto;
-  background-color: blue-;
 }
-.navbar--div-right{
-  display: flex;
-  height: 100px;
-  margin-left: auto;
-}
-.navbar--div-left > h3{
+
+.navbar--links{
   margin-top: auto;
   margin-bottom: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  color: black;
+  display: block;
+  font-size: 1.17em;
+  font-weight: bold;
 }
-.navbar--div-right > h3{
-  margin-top: auto;
-  margin-bottom: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+.navbar--links:hover{
+  color: blue;
+}
+
+.nav-bar--logo-div{
   
+  height: 100px;
 }
+
 .nav-bar--logo{
   height: 100px;
   margin: auto;
 }
 
+.buffer{
+  height: 150px;
+}
+
+.calculator {
+  height: 550px;
+  width: 870px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  padding-top: 25px;
+}
+
+.maingrid-container-div{
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
 .maingrid-container{
-  background-color: aquamarine;
+  
+  background-color: whitesmoke;
+  border-style: solid;
+  border-radius: 100px;
+  height: 600px;
 }
