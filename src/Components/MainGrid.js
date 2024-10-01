@@ -2,6 +2,7 @@ import React from "react"
 import { useEffect, useRef } from "react";
 import {Col, Divider, Row} from "antd"
 import { Expression, GraphingCalculator, useCalculator } from "desmos-react";
+import Equations from "../Pages/Equations";
 export default function MainGrid(props){
 
     return(
@@ -31,17 +32,12 @@ export default function MainGrid(props){
                     projectorMode
                     settingsMenu={false}
                     pasteGraphLink={true}
-                    keypad={true}
+                    keypad={true} 
+                    expressionsTopbar={false}
+                    zoomButtons={false}
                 >
-                    <Expression
-                        id="skibidi"
-                        latex="\int_{0}^{\frac{\ln100}{\ln2}}\left(\frac{\left(5-x\right)\cdot2^{x}}{100}\right)dx"
-                    />
-                    <Expression
-                        id="whatthesigma"
-                        fill={true}
-                        latex="\frac{\left(\left(5-x\right)\cdot2^{x}\right)}{100}"
-                    />
+
+                <SetMathBounds />
                 </GraphingCalculator>
                 </div> 
             </Col>
@@ -50,19 +46,32 @@ export default function MainGrid(props){
     </div>
 </div>
     )
+}
+
 function SetMathBounds(){
     const calc = useCalculator();
     const hasRun = useRef(false);
     if (!hasRun.current) {
-        const bounds = calc.graphpaperBounds.mathCoordinates;
-        calc.setMathBounds({
-            top: 3.5,
-            bottom: -3.5,
-            left: -((7 * bounds.width) / bounds.height) / 2,
-            right: (7 * bounds.width) / bounds.height / 2
-        });
-        hasRun.current = true;
+      calc.setMathBounds({
+        top: 2,
+        bottom: -3,
+        left: -1,
+        right: 9,
+      });
+
+      let str = String.raw`\int_{0}^{\frac{\ln100}{\ln2}}\left(\frac{\left(5-x\right)\cdot2^{x}}{100}\right)dx`;       
+      let str1 = String.raw`\frac{\left(\left(5-x\right)\cdot2^{x}\right)}{100}`;          
+      let str2 = String.raw`\frac{\left(\left(5-x\right)\cdot2^{x}\right)}{100}\ge y\ge0`;
+      let str3 = String.raw`\frac{\left(\left(5-x\right)\cdot2^{x}\right)}{100}\le y\le0`;
+      let str4 = String.raw`x=\frac{\ln100}{\ln2}`;
+
+      calc.setExpression({id:"1", latex:str});
+      calc.setExpression({id:"2", latex:str1});
+      calc.setExpression({id:"3", latex:str2, secret:true});
+      calc.setExpression({id:"4", latex:str3, secret:true});
+      calc.setExpression({id:"5", latex:str4, secret:true});
+
+      hasRun.current = true;
     }
     return null;
-    }
 }
