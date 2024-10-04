@@ -12,7 +12,7 @@ export default function MainGrid(props){
 
             <Col span={7} className="gutter-row">
                 <div className="maingrid-container">  
-                    {props.silly }
+                    
                     <h1>Microsoft Question</h1>
                         <p>If we have a game where I have a number 1-100 and offer you 5 dollars. You have to guess, and I say higher or lower. Each guess takes up a dollar, and can go negative. Should you play the game?</p>
                     <h2>My solution:</h2>
@@ -21,7 +21,9 @@ export default function MainGrid(props){
                         <p>Amount gained = starting amount - x, where x is a guess</p>
                         <p>Probability = (2^x)/100 When using optimal strategy, which in this game is similar to a bns</p>
                         <p>Expected value = ((starting amout - x) (2^x))/100</p>
-                        <p>Next we take the integral of this value</p>
+                        <p>Next we take the integral of this value, from 0 to ln100/ln2(Max amount of guesses), as the area under the curve will equal the total amount of money gained</p>
+                        <p>This gives us our answer of: -.383</p>
+                        <h3>We should NOT play this game at those bounds</h3>
                 </div> 
             </Col>
 
@@ -33,10 +35,8 @@ export default function MainGrid(props){
                     settingsMenu={false}
                     pasteGraphLink={true}
                     keypad={true} 
-                    expressionsTopbar={false}
                     zoomButtons={false}
                 >
-
                 <SetMathBounds />
                 </GraphingCalculator>
                 </div> 
@@ -52,6 +52,7 @@ function SetMathBounds(){
     const calc = useCalculator();
     const hasRun = useRef(false);
     if (!hasRun.current) {
+
       calc.setMathBounds({
         top: 2,
         bottom: -3,

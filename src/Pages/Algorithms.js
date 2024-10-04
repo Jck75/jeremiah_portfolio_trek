@@ -1,13 +1,13 @@
-import Header from "../Components/NavBar"
-import MainGrid from '../Components/MainGrid';
+import { useEffect, useRef } from "react";
+import {Col, Divider, Row} from "antd";
 
 function Algorithms() {
   return (
     <div>
 
  
+      <Divider children={"Algorithms"} style={{  borderColor: '#7cb305', fontSize:30}} />
       
-      <MainGrid silly={"Algorithms"}/>
 
     </div>
   );

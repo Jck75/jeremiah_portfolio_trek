@@ -1,11 +1,11 @@
-import Header from "../Components/NavBar"
-import MainGrid from '../Components/MainGrid';
+import { useEffect, useRef } from "react";
+import {Col, Divider, Row} from "antd";
 
 function Data() {
   return (
     <div>
-      
-      <MainGrid silly={"Data"}/>
+      <Divider children={"Data"} style={{  borderColor: '#7cb305', fontSize:30}} />
+
 
     </div>
   );
