@@ -1,6 +1,11 @@
+html{
+  position:relative; 
+  min-height: 100%;
+}
 .App {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 0;
+  margin-bottom: 100px;
 }
 
 .App-logo {

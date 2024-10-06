@@ -56,7 +56,7 @@ code {
 }
 
 .buffer{
-  height: 150px;
+  height: 125px;
 }
 
 .calculator {
@@ -83,4 +83,17 @@ code {
 
 .aboutme-page{
   padding: 50px;
+}
+
+.jobs > li{
+  text-align: left;
+  margin-right: auto;
+  font-size: 20px;
+  
+}
+.jobs > p{
+  padding-left: 25px;
+  text-align: left;
+  padding-right: 25px;
+
 }

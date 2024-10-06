@@ -65,6 +65,8 @@ function SetMathBounds(){
       let str2 = String.raw`\frac{\left(\left(5-x\right)\cdot2^{x}\right)}{100}\ge y\ge0`;
       let str3 = String.raw`\frac{\left(\left(5-x\right)\cdot2^{x}\right)}{100}\le y\le0`;
       let str4 = String.raw`x=\frac{\ln100}{\ln2}`;
+      
+
 
       calc.setExpression({id:"1", latex:str});
       calc.setExpression({id:"2", latex:str1});

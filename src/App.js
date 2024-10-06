@@ -9,7 +9,7 @@ import Data from "./Pages/Data";
 import Equations from "./Pages/Equations";
 import Algorithms from "./Pages/Algorithms";
 import Interactive_Experiences from "./Pages/Interactive_Experiences";
-
+import Footer from "./Components/Footer";
 function App() {
   return (
     <div className="App">
@@ -22,10 +22,11 @@ function App() {
           <Route path="equations" element={<Equations />} />
           <Route path="data" element={<Data />} />
           <Route path="algorithms" element={<Algorithms />} />
+        
         </Route>
       </Routes>
     </BrowserRouter>
-
+    <Footer />
     </div>
   );
 }
