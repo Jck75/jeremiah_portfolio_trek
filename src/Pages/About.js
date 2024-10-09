@@ -82,12 +82,12 @@ function About() {
           <div style={{height: '500px', display:'flex', alignItems:'center', justifyContent:'center', flexDirection:'column' }}>
             <Divider children={"Volunteering in Guatemala"} style={{  borderColor: '#9cb305', fontSize:30}} ></Divider>
             <p  style={{fontSize:'20px'}}>
-              Through my church, I was went on two mission trips to where I was born, Guatemala. On these mission trips 
-              we went to help out feeding centers for kids, but focused more on the staff as they very often get looked 
-              over on trips like these. I also came up with the idea to create a pickleball court at an orphanage during 
-              the first trip and then maintained during the second one. There was this one deaf kid named Edgar who played 
-              with me like 2 hours a day(they never beat me once). These trips have been some of the most transformative 
-              experiences I have been through 
+              Through my church, I was went on two mission trips to where I was born, Guatemala. On these mission trips, 
+              we went to help out feeding centers for kids, but focused more on the staff as they very often get overlooked 
+              on trips like these. I also came up with the idea to create a pickleball court at an orphanage during 
+              the first trip and then maintained it during the second one. There was one deaf kid named Edgar who played 
+              with me for two hours a day (he never beat me once!). These trips have been some of the most transformative 
+              experiences I have been through. 
             </p>
 
                

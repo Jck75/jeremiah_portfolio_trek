@@ -97,3 +97,9 @@ code {
   padding-right: 25px;
 
 }
+.footer-contact-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 150px;
+}
